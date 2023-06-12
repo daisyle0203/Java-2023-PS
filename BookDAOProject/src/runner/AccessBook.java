@@ -5,10 +5,11 @@ import java.util.ArrayList;
 import controller.BookDaoImpl;
 import daointerface.BookDao;
 import model.Books;
+import model.Customer;
 
 public class AccessBook {
 	public static void main(String[] args) {
-		// creating object
+	//	 creating object
 		BookDao bookDao = new BookDaoImpl();
 		System.out.println("--------- inserting book records ----------");
 
@@ -35,6 +36,8 @@ public class AccessBook {
 		BookList.add(b4);
 
 		bookDao.saveBook(BookList);
+		
+
 	}
 
 }

@@ -1,11 +1,13 @@
 package daointerface;
 
+import java.sql.SQLException;
+
 import model.Customer;
 
 public interface CustomerDAO {
-	Customer getCustomerById(int id);
+	Customer getCustomerById(int id)  throws ClassNotFoundException, SQLException;
 
 	void addCustomer(Customer c);
 
-	void removeCustomerById(int id);
+	boolean removeCustomerById(int id);
 }
