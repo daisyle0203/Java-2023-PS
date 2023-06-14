@@ -20,7 +20,7 @@
 		<property name="hibernate.format_sql">true </property>
 
 		<!-- Mapping entity file -->
-		<mapping class="org.daisy.HibernateJPABeginner.model.Department" />
+		<mapping class="org.daisy.HibernateJPABeginner.model.User" />
 	</session-factory>
 </hibernate-configuration>
 

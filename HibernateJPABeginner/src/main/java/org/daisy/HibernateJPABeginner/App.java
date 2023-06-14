@@ -1,13 +1,18 @@
 package org.daisy.HibernateJPABeginner;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
+import org.daisy.HibernateJPABeginner.controller.*;
+
+
+public class App {
+	public static void main(String[] args) {
+		FindUser_Hql u = new FindUser_Hql(); // create a FindUser_Hql object
+//		u.findUser(); // call the findUser method
+//		u.findUserSelect();
+//		u.getRecordbyId();
+//		u.getRecords();
+//		u.getMaxSalary();
+//		u.getMaxSalaryGroupBy();
+		u.namedQueryExample();
+
+	}
 }
