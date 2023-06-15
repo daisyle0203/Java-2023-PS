@@ -1,10 +1,7 @@
 package org.daisy.DemoRelationship;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.daisy.DemoRelationship.model.Department;
-import org.daisy.DemoRelationship.model.Teacher;
+import org.daisy.DemoRelationship.model.Address;
+import org.daisy.DemoRelationship.model.Person;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -53,46 +50,78 @@ public class App {
 //		session.persist(t4);
 //		t.commit();
 
-		Teacher t1 = new Teacher();
-		t1.setTeachername("Haseeb");
-		t1.setSalary("100");
+//		Teacher t1 = new Teacher();
+//		t1.setTeachername("Haseeb");
+//		t1.setSalary("100");
+//
+//		Teacher t2 = new Teacher();
+//		t2.setTeachername("Jenny Finch");
+//		t2.setSalary("10000");
+//
+//		Teacher t3 = new Teacher();
+//		t3.setTeachername("James");
+//		t3.setSalary("25000");
+//
+//		Teacher t4 = new Teacher();
+//		t4.setTeachername("SID ROSE");
+//		t4.setSalary("3000");
+//
+//		Teacher t5 = new Teacher();
+//		t5.setSalary("200");
+//		t5.setTeachername("Ali");
+//
+//		// Add teacher entity object to the list
+//		List<Teacher> teachlist = new ArrayList();
+//		teachlist.add(t1);
+//		teachlist.add(t2);
+//		teachlist.add(t3);
+//		teachlist.add(t4);
+//		teachlist.add(t5);
+//		session.persist(t1);
+//		session.persist(t2);
+//		session.persist(t3);
+//		session.persist(t4);
+//		session.persist(t5);
+//
+//		// Creating Department
+//		Department department = new Department();
+//		department.setDname("Development");
+//		department.setTeacherList(teachlist);
+//
+//		// Storing Department
+//		session.persist(department);
+//		t.commit();
 
-		Teacher t2 = new Teacher();
-		t2.setTeachername("Jenny Finch");
-		t2.setSalary("10000");
+		System.out.println("Maven + Hibernate + SQL One to One Mapping Annotations");
 
-		Teacher t3 = new Teacher();
-		t3.setTeachername("James");
-		t3.setSalary("25000");
+		Address a1 = new Address();
+		a1.setCity("nyc");
+		a1.setState("NY");
+		a1.setStreet("27th street");
+		a1.setZipcode(11103);
 
-		Teacher t4 = new Teacher();
-		t4.setTeachername("SID ROSE");
-		t4.setSalary("3000");
+		Address a2 = new Address();
+		a2.setCity("Bufflo");
+		a2.setState("NY");
+		a2.setStreet("28th street");
+		a2.setZipcode(15803);
 
-		Teacher t5 = new Teacher();
-		t5.setSalary("200");
-		t5.setTeachername("Ali");
+		Person p1 = new Person();
+		p1.setAge(25);
+		p1.setEmail("e.jon@email.com");
+		p1.setName("elbert Adam");
+		p1.setAdress(a1);
 
-		// Add teacher entity object to the list
-		List<Teacher> teachlist = new ArrayList();
-		teachlist.add(t1);
-		teachlist.add(t2);
-		teachlist.add(t3);
-		teachlist.add(t4);
-		teachlist.add(t5);
-		session.persist(t1);
-		session.persist(t2);
-		session.persist(t3);
-		session.persist(t4);
-		session.persist(t5);
+		Person p2 = new Person();
+		p2.setAge(45);
+		p2.setEmail("ch.fink@email.com");
+		p2.setName("Christ fink");
+		p2.setAdress(a2);
 
-		// Creating Department
-		Department department = new Department();
-		department.setDname("Development");
-		department.setTeacherList(teachlist);
-
-		// Storing Department
-		session.persist(department);
+		session.persist(p1);
+		session.persist(p2);
+		session.persist(a1);
+		session.persist(a2);
 		t.commit();
 
 	}
