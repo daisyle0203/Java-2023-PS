@@ -12,8 +12,7 @@ class ControllerComplyTest {
 		boolean expectedResult = true;
 		UserController uController = new UserController();
 		boolean actualResult = uController.login("test@test.com", "12345");
-		assertEquals(expectedResult, actualResult, "Login failed!")
-		System.out.println("Login");
+		assertEquals(expectedResult, actualResult, "Login successfully!");
 	}
 
 }
