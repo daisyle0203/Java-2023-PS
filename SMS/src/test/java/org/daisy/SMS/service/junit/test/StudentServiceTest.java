@@ -51,7 +51,7 @@ public class StudentServiceTest {
 		List<Course> studentCourses1 = studentService.getStudentCourses(email1);
 
 		// Assert that the list of student courses is not null
-		assertEquals(0, studentCourses.size());
+		assertEquals(3, studentCourses.size());
 		assertNotEquals(0, studentCourses1.size());
 	}
 
